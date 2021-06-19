@@ -7,27 +7,81 @@
     display: grid;
     grid: 150px 150px 150px / 150px 150px 150px;
     grid-gap: 10px;
-    background-color: #2196F3;
+    background-color: #2196f3;
     padding: 10px;
   }
 
-  .grid-container>div {
+  .grid-container > div {
     background-color: rgba(255, 255, 255, 0.8);
-    text-align: center;
+
     padding: 20px 0;
     font-size: 30px;
   }
+
+  .center {
+    margin: auto;
+    width: 51%;
+
+    text-align: center;
+  }
+
+  .circle {
+    height: 60px;
+    width: 100px;
+    
+    border-radius: 50%;
+    display: inline-block;
+    border-left: 10px solid black;
+    border-right: 10px solid black;
+    border-top: 10px solid black;
+    border-bottom: 10px solid black;
+  }
+  .cross {
+    display: inline-block;
+    width: 100px;
+    height: 100px;
+
+    background: linear-gradient(
+        45deg,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0) 45%,
+        black 45%,
+        black 55%,
+        rgba(0, 0, 0, 0) 45%,
+        rgba(0, 0, 0, 0) 100%
+      ),
+      linear-gradient(
+        135deg,
+        rgba(0, 0, 0, 0) 0%,
+        rgba(0, 0, 0, 0) 45%,
+        black 45%,
+        black 55%,
+        rgba(0, 0, 0, 0) 45%,
+        rgba(0, 0, 0, 0) 100%
+      );
+  }
 </style>
-<div class="grid-container">
-  <div>1</div>
-  <div>2</div>
-  <div>3</div>
+<div id="mainGrid" class="grid-container center">
+  
+  <div id="block1"(click)='clicked("block1")' ></div>
+  <div id="block2"(click)='clicked("block2")' ></div>
+  <div id="block3"(click)='clicked("block3")' ></div>
 
-  <div>4</div>
-  <div>5</div>
-  <div>6</div>
+  <div id="block4"(click)='clicked("block4")' ></div>
+  <div id="block5"(click)='clicked("block5")' ></div>
+  <div id="block6"(click)='clicked("block6")' ></div>
 
-  <div>7</div>
-  <div>8</div>
-  <div>9</div>
+  <div id="block7"(click)='clicked("block7")' ></div>
+  <div id="block8"(click)='clicked("block8")' ></div>
+  <div id="block9"(click)='clicked("block9")' ></div>
+  
+ 
+  
 </div>
+ <br>
+  <button class="center" (click)="reset" >Reset</button>
+   <br>
+    <br>
+     <br>
+      <br>
+
